@@ -1,0 +1,180 @@
+@import "../../styles/variables.sass"
+@import "../../styles/bootstrapSettings"
+
+.sidebar
+    font-family: "Roboto"
+    height: 100vh
+    position: sticky
+    top: 0
+    display: flex
+    flex-direction: column
+    overflow-y: overlay
+
+    &::-webkit-scrollbar-track
+        display: none
+
+    &::-webkit-scrollbar
+        width: 6px
+        background: $ivory
+        overflow: visible
+        border-radius: 0 5px 5px 0
+
+    &::-webkit-scrollbar-thumb
+        background: $gray_blue
+        border: none
+        border-radius: 0 5px 5px 0
+        width: 6px
+    
+    &-logo
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $gray_blue
+
+        img
+            width: 80px
+            max-width: 100%
+            height: auto
+            margin-top: 40px
+            margin-bottom: 32.81px
+
+    &-booking
+        display: flex
+        flex-direction: column
+        background: $gray_blue
+        padding-right: 16px
+        flex: 50%
+
+        &:hover,
+        &:active
+            color: $pink
+
+        &-title
+            margin: 14px 0 8px
+            color: $light_third
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 18px
+            padding-left: 16px
+        
+        &-item
+            display: flex
+            align-items: center
+            gap: 12px
+            padding: 13px 16px
+            text-decoration: none
+            color: $light_third
+            font-size: 16px
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            border-radius: 0 30px 30px 0
+            
+            &:hover,
+            &.active
+                background-color: $purple
+        
+        &-second
+            background: $dark_gray2
+        
+        &-third
+            background: $black
+            flex: 1
+                
+    &-accordion
+        &-body
+            a
+                &:hover,
+                &.active
+                    color: $pink
+
+        &-item
+            padding-left: 16px
+            background: $gray_blue
+            border-color: $gray_blue
+
+        button
+            display: flex
+            align-items: center
+            gap: 12px
+            background: $gray_blue
+            border-color: $gray_blue
+            color: $light_third
+            font-size: 16px
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            padding-left: 0
+
+            &::after
+                background-position: 0 0
+                background-repeat: no-repeat
+                background-image: url('data: image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkNvbXBvbmVudCAxIj4KPGcgaWQ9Ikdyb3VwIj4KPHBhdGggaWQ9IlZlY3RvciAoU3Ryb2tlKSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMC4zNjE2IDEzLjc1NTJDMTAuMTUzNiAxMy45MzM1IDkuODQ2NTYgMTMuOTMzNSA5LjYzODUxIDEzLjc1NTJMMi45NzE4NCA4LjA0MDg4QzIuNzM4ODggNy44NDEyMSAyLjcxMTkgNy40OTA0OCAyLjkxMTU4IDcuMjU3NTJDMy4xMTEyNiA3LjAyNDU3IDMuNDYxOTggNi45OTc1OSAzLjY5NDk0IDcuMTk3MjZMMTAuMDAwMSAxMi42MDE3TDE2LjMwNTIgNy4xOTcyNkMxNi41MzgxIDYuOTk3NTkgMTYuODg4OSA3LjAyNDU3IDE3LjA4ODUgNy4yNTc1MkMxNy4yODgyIDcuNDkwNDggMTcuMjYxMiA3Ljg0MTIxIDE3LjAyODMgOC4wNDA4OEwxMC4zNjE2IDEzLjc1NTJaIiBmaWxsPSIjRjJGMkYyIi8+CjwvZz4KPC9nPgo8L3N2Zz4K')
+
+            &:not(.collapsed)::after
+                background-position: 0 0
+                background-repeat: no-repeat
+                background-image: url('data: image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkNvbXBvbmVudCAxIj4KPGcgaWQ9Ikdyb3VwIj4KPHBhdGggaWQ9IlZlY3RvciAoU3Ryb2tlKSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMC4zNjE2IDEzLjc1NTJDMTAuMTUzNiAxMy45MzM1IDkuODQ2NTYgMTMuOTMzNSA5LjYzODUxIDEzLjc1NTJMMi45NzE4NCA4LjA0MDg4QzIuNzM4ODggNy44NDEyMSAyLjcxMTkgNy40OTA0OCAyLjkxMTU4IDcuMjU3NTJDMy4xMTEyNiA3LjAyNDU3IDMuNDYxOTggNi45OTc1OSAzLjY5NDk0IDcuMTk3MjZMMTAuMDAwMSAxMi42MDE3TDE2LjMwNTIgNy4xOTcyNkMxNi41MzgxIDYuOTk3NTkgMTYuODg4OSA3LjAyNDU3IDE3LjA4ODUgNy4yNTc1MkMxNy4yODgyIDcuNDkwNDggMTcuMjYxMiA3Ljg0MTIxIDE3LjAyODMgOC4wNDA4OEwxMC4zNjE2IDEzLjc1NTJaIiBmaWxsPSIjRjJGMkYyIi8+CjwvZz4KPC9nPgo8L3N2Zz4K')
+
+            &:hover,
+            &:active
+                border: none
+                background: $gray_blue !important
+                border-color: $gray_blue
+                color: $light_third
+                font-size: 16px
+                font-style: normal
+                font-weight: 500
+                line-height: normal
+
+            &:not(.collapsed) 
+                color: $light_third
+                background-color: $gray_blue
+                box-shadow: initial
+
+            &:focus 
+                box-shadow: initial
+                    
+            a
+                display: flex
+                align-items: center
+                gap: 12px
+                background: $gray_blue 
+                border-color: $gray_blue
+                color: $light_third
+                font-size: 16px
+                font-style: normal
+                font-weight: 500
+                line-height: normal
+                text-decoration: none
+
+                &:hover,
+                &:active,
+                &:focus
+                    border: none
+                    background: $gray_blue !important
+                    border-color: $gray_blue
+                    color: $light_third
+                    font-size: 16px
+                    font-style: normal
+                    font-weight: 500
+                    line-height: normal
+        
+        &-body
+            color: $light_third
+            padding-bottom: 0px
+
+            ul
+                line-height: 32px
+
+                li
+                    padding-bottom: 18px
+
+                    a
+                        color: $light_third
+                        font-size: 16px
+                        font-style: normal 
+                        font-weight: 400
+                        line-height: normal
+                        text-decoration: none

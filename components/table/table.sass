@@ -1,0 +1,163 @@
+@import "@/styles/variables"
+
+.admin-table
+    background-color: $white
+    padding: 0
+    margin: 0
+
+    &-container 
+        max-width: 100%
+        overflow-x: overlay
+        scrollbar-width: thin
+        scrollbar-color: #999
+
+        &::-webkit-scrollbar-track
+            display: none
+
+        &::-webkit-scrollbar
+            height: 6px
+            background: $light_gray
+            overflow: visible
+            border-radius: 5px
+
+        &::-webkit-scrollbar-thumb
+            background: $gray
+            border: none
+            border-radius: 5px
+            height: 6px
+
+    thead
+        border-bottom: 2px solid $light
+
+        th 
+            padding: 15px
+            color: $light_dark
+            font-family: "Roboto"
+            font-size: 14px
+            font-style: normal
+            font-weight: 500
+            line-height: 22px
+            white-space: nowrap
+
+            input[type="checkbox"]
+                width: 24px
+                height: 24px
+    
+    &-sort
+        padding: 0
+
+        &-container
+            display: inline-flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            vertical-align: middle
+            margin-left: 20px
+
+        &-asc
+            &::before
+                content: ""
+                display: block
+                width: 0
+                height: 0
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-bottom: 10px solid $lightest
+
+            &.active
+                &::before
+                    border-bottom-color: $black
+        
+        &-desc
+            &::before
+                content: ""
+                display: block
+                width: 0
+                height: 0
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid $lightest
+            
+            &.active
+                &::before
+                    border-top-color: $black
+    
+    tbody
+        td 
+            color: $light_second
+            font-family: "Nunito"
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: 22px
+            padding: 12px 16px
+            white-space: break-spaces
+            vertical-align: middle
+
+            input[type="checkbox"]
+                width: 24px
+                height: 24px
+
+            img 
+                width: 100%
+                height: auto
+            
+            a
+                color: $purple
+                text-decoration-thickness: 1px
+                text-decoration: none
+
+                &:hover
+                    text-decoration: underline
+
+    &-arrow
+        width: 74px
+        max-width: 100%
+    
+    &-actions
+        display: flex
+        gap: 16px
+
+        .btn
+            padding: 0
+
+            svg
+                width: 24px
+                height: 24px
+
+    &-nav
+        background-color: $white
+        padding-left: 10.87px
+        display: flex
+        align-items: center
+        justify-content: normal
+        color: $light_second
+        font-family: Nunito
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 22px
+        width: 100%
+
+        a
+            border: none
+            color: $light_second
+
+        &-showing
+            padding-left: 10.87px
+            padding-right: 30px
+
+        &-display
+            padding-right: 8px
+
+        &-counter
+            margin-bottom: 16px
+        
+        &-pag
+            a
+                background-color: $light
+            
+            &-link
+                &:hover
+                    background-color: $dark_gray !important
+                    color: $white

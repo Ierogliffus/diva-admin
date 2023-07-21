@@ -1,0 +1,159 @@
+@import "@/styles/variables"
+.parsed-markdown
+    *
+        font-family: inherit
+        font-weight: inherit
+        font-size: inherit
+        line-height: inherit
+        color: inherit
+
+    &-code
+        background: $light_gray
+        border: 1px solid $light_second
+        border-radius: 4px
+        overflow: hidden
+
+        pre 
+            background: $white
+            border-top: 1px solid $light_second
+            padding: 16px 12px
+            margin: 0
+            overflow-x: auto
+            scrollbar-width: thin
+            scrollbar-color: $gray $light
+
+            &::-webkit-scrollbar-track 
+                display: none
+
+                
+            &::-webkit-scrollbar 
+                height: 8px
+                background: $light
+                overflow: visible
+
+            &::-webkit-scrollbar-thumb 
+                background: $gray
+                border: none
+                border-radius: 0
+                height: 8px
+       
+        h1
+        h2
+        h3
+        h4
+        h5
+        h6
+            line-height: 1
+
+        ol,
+        ul
+            padding-left: 18px
+
+        &-head 
+            padding: 4px 12px
+
+    &-table 
+        overflow-x: auto
+        width: 100%
+        
+        table 
+            width: max-content
+
+        tbody
+            border: 1px solid $black
+        td
+            border: 1px solid $black
+            padding: 4px
+
+        tfoot
+            border: 1px solid $black
+        th
+            border: 1px solid $black
+            padding: 4px
+
+        thead
+            border: 1px solid $black
+        tr
+            border: 1px solid $black
+
+        &::-webkit-scrollbar-track 
+            display: none
+
+                
+        &::-webkit-scrollbar 
+            height: 8px
+            background: $light
+            overflow: visible
+
+        &::-webkit-scrollbar-thumb 
+            background: $gray
+            border: none
+            border-radius: 0
+            height: 8px
+    
+.input-markdown
+    max-width: 980px
+
+    &-panel
+        inset: 0 0 auto 0
+        display: flex
+        align-items: center
+        padding: 8px 17px 8px
+        border-bottom: 1px solid $gray
+        border-radius: 6px 6px 0 0
+        background: $white
+
+        .dropdown
+            margin-right: 8px
+
+            .btn
+                margin-right: 0
+                
+                &:first-child
+                    border-top-right-radius: 0
+                    border-bottom-right-radius: 0
+                    border-right: 0 !important
+            
+                &.dropdown-toggle
+                    border-top-left-radius: 0
+                    border-bottom-left-radius: 0
+
+            &-menu 
+                padding: 0
+                overflow: hidden
+                width: max-content
+                min-width: 0
+
+                .btn
+                    border-radius: 0
+                    border-width: 0 0 1px !important
+
+                    &:last-child
+                        border-bottom: 0 !important
+
+        .btn
+            border-radius: 6px
+            background: transparent !important
+            border: 1px solid $gray !important
+            padding: 7px
+            color: $black !important
+            box-shadow: none !important
+            font-family: "Inter"
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 24px
+            text-decoration: none
+            margin-right: 8px
+
+            &:last-child
+                margin-right: 0
+                margin-left: auto
+
+            svg
+                width: 24px
+                height: 24px
+
+    .admin-form-control
+        border-top-right-radius: 0
+        border-top-left-radius: 0

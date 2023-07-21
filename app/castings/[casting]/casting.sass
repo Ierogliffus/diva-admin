@@ -1,0 +1,35 @@
+@import "@/styles/variables"
+
+.castings-button-update
+    svg
+        path
+            stroke: $white
+
+.casting
+    &-table
+        &-viewed
+            padding: 0
+            margin: 0
+            min-height: 0
+
+            input 
+                display: none
+
+                &:checked
+                    & + label
+                        background: $green
+
+            label
+                display: block
+                padding: 3px 4px
+                background: $red
+                border-radius: 50%
+                line-height: 1
+                width: 20px
+                margin: auto
+
+                svg
+                    width: 12px
+                    height: 12px
+
+

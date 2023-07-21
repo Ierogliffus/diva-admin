@@ -1,0 +1,132 @@
+@import "@/styles/variables.sass"
+@import "@/styles/bootstrapSettings"
+@import "@/styles/fonts"
+    
+.admin-form
+    &-group
+        &:not(:last-child)
+            margin-bottom: 16px
+        
+        &:last-child
+            margin-bottom: 40px
+
+    &-label 
+        color: $black
+        font-family: "Nunito"
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 8px
+
+        &-image
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 165px
+            height: 200px
+            border-radius: 6px
+            background: $light_gray
+            margin-bottom: 0
+            cursor: pointer
+            background-position: center
+            background-size: cover
+            overflow: hidden
+            position: relative
+
+            &-panel
+                position: absolute
+                inset: auto 0 0 0
+                background: rgba(45, 45, 45, .5)
+                display: flex
+                justify-content: center
+
+                button
+                    width: 100%
+
+                svg
+                    path 
+                        fill: $white
+
+            svg
+                width: 24px
+                height: 24px
+
+    
+    textarea
+        min-height: 50vh
+        max-width: 100%
+
+    &-control
+        border-radius: 6px
+        background: $white
+        padding: 17px 22px
+        border: 0
+        font-family: "Nunito"
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        box-shadow: none !important
+        max-width: 440px
+
+        &-image
+            display: none
+
+        &::-webkit-scrollbar-track 
+            display: none
+
+        &::-webkit-scrollbar 
+            height: 8px
+            width: 8px
+            background: $light
+            overflow: visible
+
+        &::-webkit-scrollbar-thumb 
+            background: $gray
+            border: none
+            border-radius: 0
+            height: 8px
+            width: 8px
+
+        &::placeholder
+            color: $gray
+
+    &-submit
+        display: block
+        max-width: 440px
+        width: 100%
+        border-radius: 6px
+        background: $black !important
+        border: 0 !important
+        padding: 15px
+        color: $white !important
+        box-shadow: none !important
+        font-family: "Inter"
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 8px
+        text-decoration: none
+    
+    &-back 
+        display: block
+        max-width: 440px
+        width: 100%
+        border-radius: 6px
+        background: transparent !important
+        border: 1px solid $gray !important
+        padding: 14px
+        color: $black !important
+        box-shadow: none !important
+        font-family: "Inter"
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 8px
+        text-decoration: none
+
+
+            
